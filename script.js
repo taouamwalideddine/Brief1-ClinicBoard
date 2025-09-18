@@ -25,3 +25,18 @@ class ClinicBoard {
             e.preventDefault();
             this.handleLogin();
         });
+
+        document.querySelector('#set-password-form form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleSetPassword();
+        });
+        // navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const section = item.getAttribute('data-section');
+                this.navigateToSection(section);
+                this.closeMobileMenu();
+            });
+        });
+    }
+}
