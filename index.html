@@ -1,80 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClinicBoard - Medical Practice Management</title>
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClinicBoard - Medical Practice Management</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="sidebar" class="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-logo">
-                <div class="logo-icon">+</div>
-            <h2>ClinicBoard</h2>
-            </div>
-        </div>
-        <nav class="sidebar-nav">
-            <button class="nav-item active" data-section="dashboard">📊 Tableau de bord</button>
-            <button class="nav-item" data-section="patients">👥 Patients</button>
-            <button class="nav-item" data-section="appointments">📅 Rendez-vous</button>
-            <button class="nav-item" data-section="finance">💰 Finances</button>
-        </nav>
-    </div>
-
-    <div class="main-content">
-        <header class="header">
-            <div class="header-logo">
-                <div class="logo-icon">+</div>
-                <h1>ClinicBoard</h1>
-            </div>
-        </header>
-
-                <section id="auth-section" class="section">
-            <div class="auth-container">
-                <div class="auth-card login-card">
-                    <div id="login-form">
-                        <form class="auth-form">
-                            <div class="form-group">
-                                <label for="login-password">Mot de passe</label>
-                                <input type="password" id="login-password" placeholder="Mot de passe" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Se connecter</button>
-                            <div id="login-error" class="error-message hidden">
-                                <span class="error-icon">✕</span>
-                                <span class="error-text">Mot de passe incorrect. Tentatives restantes: <span id="attempts-remaining">2/3</span></span>
-                            </div>
-                        </form>
-                    </div>
-                    <div id="set-password-form" class="hidden">
-                        <form class="auth-form">
-                            <div class="form-group">
-                                <label for="set-password">Nouveau mot de passe</label>
-                                <input type="password" id="set-password" required minlength="8">
-                            </div>
-                            <div class="form-group">
-                                <label for="confirm-password">Confirmer le mot de passe</label>
-                                <input type="password" id="confirm-password" required minlength="8">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Créer le mot de passe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-                <!-- Dashboard Section -->
-        <section id="dashboard-section" class="section hidden">
-            <div class="welcome-section">
-                <h1>Bonjour, Dr. Martin 👋</h1>
-                <p>Voici votre activité du mois</p>
-            </div>
-            <div class="kpi-grid">
-                <div class="kpi-card">
-                    <div class="kpi-header"><h4>CHIFFRE D'AFFAIRES</h4></div>
-                    <div class="kpi-value revenue" id="revenue-amount">€0</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-header"><h4>DÉPENSES</h4></div>
-                    <div class="kpi-value expense" id="expenses-amount">€0</div>
-                </div>   
+  <div id="root"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
